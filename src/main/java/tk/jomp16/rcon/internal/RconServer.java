@@ -126,8 +126,6 @@ public final class RconServer implements Closeable {
                 }
             }
         }).start();
-
-        log.info("Source RCON server started!");
     }
 
     /**

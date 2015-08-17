@@ -66,8 +66,6 @@ public final class RconNettyHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(final ChannelHandlerContext ctx, final Object msg) {
         final RconRequest rconRequest = (RconRequest) msg;
 
-        System.out.println(rconRequest.getType() == RconConstant.SERVERDATA_AUTH);
-
         if (rconRequest.getType() == RconConstant.SERVERDATA_AUTH) {
             if (ctx.attr(this.authenticatedAttribute).get() || rconRequest.getBody().isEmpty()) {
                 ctx.disconnect();
