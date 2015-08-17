@@ -3,6 +3,7 @@ package tk.jomp16.rcon.internal.netty;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
+import lombok.extern.log4j.Log4j2;
 import tk.jomp16.rcon.api.communication.RconRequest;
 
 import java.nio.ByteOrder;
@@ -14,13 +15,9 @@ import java.util.List;
  *
  * @see RconRequest
  */
+
+@Log4j2
 public final class RconNettyDecoder extends ByteToMessageDecoder {
-    private final boolean printPacket;
-
-    public RconNettyDecoder(final boolean printPacket) {
-        this.printPacket = printPacket;
-    }
-
     @Override
     protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) throws Exception {
         if (in.readableBytes() < 8) {
@@ -47,11 +44,11 @@ public final class RconNettyDecoder extends ByteToMessageDecoder {
 
         final String body = byteBuf.readBytes(byteBuf.readableBytes() - 4).toString(Charset.forName("UTF-8"));
 
-        if (this.printPacket) {
-            System.out.println("RCON_DECODER -> ID(" + id + "), TYPE(" + type + "), BODY(" + body + ")");
-        }
+        final String ip = ctx.channel().remoteAddress().toString().replaceFirst("/", "");
 
-//        System.out.println("packetLength=" + packetLength + " id=" + id + " type=" + type + " body=" + body);
+        log.trace("(" + ip + ") - GOT --> [" + id + "][" + type + "] -- " + body.replaceAll("[\\r\\n]+", "(newline)"));
+
+//       log.debug("packetLength=" + packetLength + " id=" + id + " type=" + type + " body=" + body);
 
         out.add(new RconRequest(id, type, body));
     }
