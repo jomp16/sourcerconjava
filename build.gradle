@@ -1,0 +1,52 @@
+plugins {
+    id 'com.github.ben-manes.versions' version '0.11.3'
+    id 'java'
+    id 'idea'
+}
+
+group 'tk.jomp16.rcon'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main {
+        compileClasspath += configurations.provided
+    }
+}
+
+idea {
+    module {
+        scopes.PROVIDED.plus += [configurations.provided]
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    provided 'org.projectlombok:lombok:1.16.4'
+    compile 'io.netty:netty-all:4.0.30.Final'
+    compile 'io.netty:netty-transport-native-epoll:4.0.30.Final'
+    compile 'org.apache.logging.log4j:log4j-core:2.3'
+    compile 'org.apache.logging.log4j:log4j-api:2.3'
+}
+
+task buildInfo {
+    def cmd = "git rev-parse --short HEAD"
+    def proc = cmd.execute()
+
+    rootProject.version += "-git_" + proc.text.trim()
+}
+
+sourceSets {
+    main {
+        java {
+            exclude 'tk/jomp16/Main.java', 'tk/jomp16/rcon/RconClient.java'
+        }
+    }
+}
