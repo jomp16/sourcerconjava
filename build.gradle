@@ -4,16 +4,16 @@
  * This file is part of Source RCON - Java.
  *
  * Source RCON - Java is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
+ * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
  * Source RCON - Java is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * GNU Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
+ * You should have received a copy of the GNU Lesser General Public License
  * along with Source RCON - Java. If not, see <http://www.gnu.org/licenses/>.
  */
 
@@ -24,7 +24,7 @@ plugins {
 }
 
 group 'tk.jomp16.rcon'
-version '2.0.1'
+version '2.0.2'
 
 repositories {
     jcenter()
@@ -48,11 +48,11 @@ idea {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    provided 'org.projectlombok:lombok:1.16.4'
-    compile 'io.netty:netty-all:4.0.30.Final'
-    compile 'io.netty:netty-transport-native-epoll:4.0.30.Final'
-    compile 'org.apache.logging.log4j:log4j-core:2.3'
-    compile 'org.apache.logging.log4j:log4j-api:2.3'
+    provided 'org.projectlombok:lombok:1.16.6'
+    compile 'io.netty:netty-all:4.0.32.Final'
+    compile 'io.netty:netty-transport-native-epoll:4.0.32.Final'
+    compile 'org.apache.logging.log4j:log4j-core:2.4'
+    compile 'org.apache.logging.log4j:log4j-api:2.4'
 }
 
 task buildInfo {

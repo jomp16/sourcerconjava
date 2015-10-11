@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="Source RCON - Java" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tk.jomp16.rcon" external.system.module.version="2.0.1-git_c3f928d" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="Source RCON - Java" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tk.jomp16.rcon" external.system.module.version="2.0.1-git_acc0925" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/main" />
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
@@ -14,15 +14,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.4" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.0.30.Final" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-epoll:4.0.30.Final" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.3" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-common:4.0.30.Final" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-buffer:4.0.30.Final" level="project" />
-    <orderEntry type="library" name="Gradle: io.netty:netty-transport:4.0.30.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.16.6" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.0.32.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-epoll:4.0.32.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-common:4.0.32.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-buffer:4.0.32.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-transport:4.0.32.Final" level="project" />
   </component>
 </module>
