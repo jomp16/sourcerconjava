@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Source RCON - Java.iml" filepath="$PROJECT_DIR$/Source RCON - Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sourcerconjava.iml" filepath="$PROJECT_DIR$/sourcerconjava.iml" />
     </modules>
   </component>
 </project>
