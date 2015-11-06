@@ -34,4 +34,4 @@ rconServer.startServer();
 
 ===
 
-Licensed under GPLv3
+Licensed under LGPLv3
