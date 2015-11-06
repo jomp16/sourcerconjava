@@ -17,5 +17,4 @@
  * along with Source RCON - Java. If not, see <http://www.gnu.org/licenses/>.
  */
 
-rootProject.name = 'Source RCON - Java'
-
+rootProject.name = 'sourcerconjava'

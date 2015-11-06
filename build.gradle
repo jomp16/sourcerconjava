@@ -24,7 +24,7 @@ plugins {
 }
 
 group 'tk.jomp16.rcon'
-version '2.0.2'
+version '2.0.3'
 
 repositories {
     jcenter()
@@ -49,17 +49,10 @@ idea {
 dependencies {
     testCompile 'junit:junit:4.12'
     provided 'org.projectlombok:lombok:1.16.6'
-    compile 'io.netty:netty-all:4.0.32.Final'
-    compile 'io.netty:netty-transport-native-epoll:4.0.32.Final'
-    compile 'org.apache.logging.log4j:log4j-core:2.4'
-    compile 'org.apache.logging.log4j:log4j-api:2.4'
-}
-
-task buildInfo {
-    def cmd = "git rev-parse --short HEAD"
-    def proc = cmd.execute()
-
-    rootProject.version += "-git_" + proc.text.trim()
+    compile 'io.netty:netty-all:4.0.33.Final'
+    compile 'io.netty:netty-transport-native-epoll:4.0.33.Final'
+    compile 'org.apache.logging.log4j:log4j-core:2.4.1'
+    compile 'org.apache.logging.log4j:log4j-api:2.4.1'
 }
 
 task sourceJar(type: Jar) {
